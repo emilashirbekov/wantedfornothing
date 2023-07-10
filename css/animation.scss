@@ -1,0 +1,54 @@
+$primary-color: #000;
+$secondary-color: #bfbfbf;
+$tertiary-color: #ff6900;
+
+//!Orange CURSOR START
+#cursor-trail {
+  position: fixed;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: $tertiary-color;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: 0.7s ease;
+}
+//!ORANGE CURSOR END
+
+//!CLOCK ANIMATION START
+@keyframes rotate-clock {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+//!CLOCK ANIMATION END
+
+//!SMOOTH TEXT ANIMATION START//
+.hidden {
+  // opacity: 0;
+  // filter: blur(1px);
+  // transition: all 1.5s;
+  opacity: 0;
+  filter: blur(1px);
+  transform: translateY(100%);
+  transition: all 1.2s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0%);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+//!SMOOTH TEXT ANIMATION END//
